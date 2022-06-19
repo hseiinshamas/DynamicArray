@@ -45,9 +45,13 @@ public class Arrays {
         return -1;
     }
 
-    public void print() {
-        for (int i = 0; i < count; i++) {
-            System.out.println(array[i]);
-        }
+    public String toString() {
+
+        StringBuilder sb = new StringBuilder(count).append(" [");
+        for (int i = 0; i < count-1; i++)
+            sb.append(array[i]).append(",");
+        return sb.append(array[count-1]).append("]").toString();
+
+
     }
 }
